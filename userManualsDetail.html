@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <title>用户手册</title>
+    <link rel="stylesheet" href="./style/swiper.min.css">
+    <link rel="stylesheet" href="./style/userManuals.css">
+</head>
+<body>
+  <div class="manuals-container">
+    <header class="fix-header">
+    </header>
+      <div class="menu">
+        <li class="active">
+          <a href="#">首页</a>
+        </li>
+        <li>
+          <a href="#">个人中心</a>
+        </li>
+        <li>
+          <a href="#">我的课表</a>
+        </li>
+        <li>
+          <a href="#">账户余额</a>
+        </li>
+        <li>
+          <a href="#">我的课程</a>
+        </li>
+        <li>
+          <a href="#">我的发票</a>
+        </li>
+        <li>
+          <a href="#">活动报名</a>
+        </li>
+        <li>
+          <a href="#">推荐好友</a>
+        </li>
+        <li>
+          <a href="#">课后作业</a>
+        </li>
+        <li>
+          <a href="#">校区评价</a>
+        </li>
+        <li>
+          <a href="#">错题本</a>
+        </li>
+        <li>
+          <a href="#">高豆兑换</a>
+        </li>
+        <li>
+          <a href="#">消息通知</a>
+        </li>
+        <li>
+          <a href="#">每日任务</a>
+        </li>
+      </div>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <header class="manuals-header">
+           <span>首页</span>
+          </header>
+          <div class="manuals-content m-slide1"></div>
+        </div>
+        <div class="swiper-slide">
+          <header class="manuals-header">
+            <span>个人中心</span>
+          </header>
+          <div class="manuals-content m-slide2"></div>
+        </div>
+        <div class="swiper-slide">
+          <header class="manuals-header">
+            <span>我的课表</span>
+          </header>
+          <div class="manuals-content m-slide3"></div>
+        </div>
+        <div class="swiper-slide">
+          <header class="manuals-header">
+            <span>账户余额</span>
+          </header>
+          <div class="manuals-content m-slide4"></div>
+        </div>
+        <div class="swiper-slide">
+          <header class="manuals-header">
+           <span>我的课程</span>
+          </header>
+          <div class="manuals-content m-slide5"></div>
+        </div>
+        <div class="swiper-slide">
+          <header class="manuals-header">
+            <span>我的发票</span>
+          </header>
+          <div class="manuals-content m-slide6"></div>
+        </div>
+        <div class="swiper-slide">
+          <header class="manuals-header">
+           <span>活动报名</span>
+          </header>
+          <div class="manuals-content m-slide7"></div>
+        </div>
+        <div class="swiper-slide">
+          <header class="manuals-header">
+           <span>推荐好友</span>
+          </header>
+          <div class="manuals-content m-slide8"></div>
+        </div>
+        <div class="swiper-slide">
+          <header class="manuals-header">
+            <span>课后作业</span>
+          </header>
+          <div class="manuals-content m-slide9"></div>
+        </div>
+        <div class="swiper-slide">
+          <header class="manuals-header">
+           <span>校区评价</span>
+          </header>
+          <div class="manuals-content m-slide10"></div>
+        </div>
+        <div class="swiper-slide">
+          <header class="manuals-header">
+            <span>错题本</span>
+          </header>
+          <div class="manuals-content m-slide11"></div>
+        </div>
+        <div class="swiper-slide">
+          <header class="manuals-header">
+           <span>高豆兑换</span>
+          </header>
+          <div class="manuals-content m-slide12"></div>
+        </div>
+        <div class="swiper-slide">
+          <header class="manuals-header">
+            <span>消息通知</span>
+          </header>
+          <div class="manuals-content m-slide13"></div>
+        </div>
+        <div class="swiper-slide">
+          <header class="manuals-header">
+           <span>每日任务</span>
+          </header>
+          <div class="manuals-content m-slide14"></div>
+        </div>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+    <footer class="manuals-footer"></footer>
+  </div> 
+  <script src="./js/jquery-1.12.2.min.js"></script>
+  <script src="./js/swiper.min.js"></script>
+  <script>
+    $(function(){
+        var $li = $('.menu li');
+        var mySwiper = new Swiper('.swiper-container', {
+          hashNavigation: true,
+	        navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+            on: {
+            slideChange: function () {
+              if (this.isBeginning) {
+                this.navigation.$prevEl.css('display', 'none');
+              } else {
+                this.navigation.$prevEl.css('display', 'block');
+              }
+            },
+          },
+            on: {
+            slideChange: function () {
+              if (this.isEnd) {
+                this.navigation.$nextEl.css('display', 'none');
+              } else {
+                this.navigation.$nextEl.css('display', 'block');
+              }
+            },
+          }
+        });
+
+        $(".fix-header i.js-sub").on("click",function(){
+            var val = $(this).attr('class');
+            if(val.indexOf('flag') === -1){
+                $(this).addClass('flag');
+                $(".menu").show();
+            }else{
+                $(this).removeClass('flag');
+                $(".menu").hide();
+            }
+        })
+        // 点击下拉框按钮到达相应slide
+        $li.on("click", function(){
+          mySwiper.slideTo($(this).index(),0);
+          $(this).parents(".menu").hide();
+          $(".fix-header i.js-sub").removeClass('flag');
+          $li.removeClass('active');
+          $(this).addClass('active');
+        })
+        // 下拉框按钮随着slide变化
+        mySwiper.on('slideChangeTransitionEnd', function () {
+           $li.removeClass('active');
+           $($li[$('.swiper-slide-active').index()]).addClass('active');
+        });
+
+        $(".icon-left-arrow").on("click",function () {
+          window.location.href = "./userManualsIndex.html";
+        })
+      // 获得索引滑到指定slide  
+      var loc = window.location.href;
+      var n1 = loc.length;//地址的总长度
+      var n2 = loc.indexOf("=");//取得=号的位置
+      var num = decodeURI(loc.substr(n2 + 1, n1 - n2));//=号后面的内容
+      console.log(num);
+      if (n2>0) {
+         mySwiper.slideTo(num,0);
+      }
+     
+})
+  </script>
+</body>
+</html>

@@ -1,0 +1,777 @@
+@charset "UTF-8";
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 20px; }
+
+body {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+  background-color: #fff;
+  -webkit-overflow-scrolling: touch; }
+
+article, aside, details, figcaption, figure, footer, header, main, nav, section, summary {
+  display: block; }
+
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden], tremplate {
+  display: none; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+input, button, select, textarea {
+  outline: none;
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0); }
+
+a {
+  background: transparent;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  color: #4162fd; }
+
+a:active {
+  outline: 0; }
+
+a:active {
+  color: #006699; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b, strong {
+  font-weight: bold; }
+
+img {
+  border: 0;
+  vertical-align: middle; }
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+pre {
+  overflow: auto;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+code, kbd, pre, samp {
+  font-family: monospace, monospace;
+  font-size: 1rem; }
+
+button, input, optgroup, select, textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0; }
+
+button {
+  overflow: visible; }
+
+button, select {
+  text-transform: none; }
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled], html input[disabled] {
+  cursor: default; }
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+input {
+  line-height: normal; }
+
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0; }
+
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+legend {
+  border: 0;
+  padding: 0; }
+
+textarea {
+  overflow: auto;
+  resize: vertical; }
+
+optgroup {
+  font-weight: bold; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td, th {
+  padding: 0; }
+
+s {
+  text-decoration: none; }
+
+html, button, input, select, textarea, samp {
+  font-family: "Helvetica Neue", Helvetica, STHeiTi,'Microsoft YaHei', Arial, sans-serif; }
+
+h1, h2, h3, h4, h5, h6, p, figure, form, blockquote {
+  margin: 0; }
+
+ul, ol, li, dl, dd {
+  margin: 0;
+  padding: 0; }
+
+ul, ol {
+  list-style: none outside none; }
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #cccccc; }
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: #cccccc; }
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #cccccc; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both; }
+
+.clearfix {
+  zoom: 1; }
+
+i {
+  font-style: normal; }
+
+.searchtitle {
+  color: #fff;
+  font-size: 0.66rem;
+  padding: 0.2rem 1rem;
+  position: relative; }
+
+.searchtitle input {
+  background: none;
+  border: 0;
+  width: 33%;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  text-align: center; }
+
+.searchtitle button {
+  background: none;
+  border: 0.06rem solid #fff;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  width: 3rem;
+  text-align: center;
+  border-radius: 1.5rem;
+  position: absolute;
+  top: 0.5rem;
+  left: 75%; }
+
+@font-face {
+  font-family: 'iconfont';
+  /* project id 472739 */
+  src: url("//at.alicdn.com/t/font_472739_27v9dl7adpxh6w29.eot");
+  src: url("//at.alicdn.com/t/font_472739_27v9dl7adpxh6w29.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_472739_27v9dl7adpxh6w29.woff") format("woff"), url("//at.alicdn.com/t/font_472739_27v9dl7adpxh6w29.ttf") format("truetype"), url("//at.alicdn.com/t/font_472739_27v9dl7adpxh6w29.svg#iconfont") format("svg"); }
+
+.iconfont, .fc-icon {
+  font-family: "iconfont" !important;
+  font-size: 20px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-plus:before {
+  content: "\e602"; }
+
+.icon-del:before {
+  content: "\e62f"; }
+
+.icon-user:before {
+  content: "\e6ce"; }
+
+.icon-woman:before {
+  content: "\e6a1"; }
+
+.icon-man:before {
+  content: "\e6a2"; }
+
+.icon-shketixing:before {
+  content: "\e688"; }
+
+.icon-kqbaogao:before {
+  content: "\e680"; }
+
+.icon-kjbaogao:before {
+  content: "\e68e"; }
+
+.icon-zytixing:before {
+  content: "\e68f"; }
+
+.icon-zyhuifu:before {
+  content: "\e681"; }
+
+.icon-msg:before {
+  content: "\e671"; }
+
+.icon-zuoye:before {
+  content: '\e68d'; }
+
+.icon-zhengzhi:before {
+  content: '\e68c'; }
+
+.icon-yuwen:before {
+  content: '\e68b'; }
+
+.icon-yingyu:before {
+  content: '\e68a'; }
+
+.icon-wuli:before {
+  content: '\e687'; }
+
+.icon-shuxue:before {
+  content: '\e685'; }
+
+.icon-shengwu:before {
+  content: '\e682'; }
+
+.icon-lishi:before {
+  content: '\e67e'; }
+
+.icon-huaxue:before {
+  content: '\e678'; }
+
+.icon-dili:before {
+  content: '\e675'; }
+
+.icon-geren:before {
+  content: '\e689'; }
+
+.icon-xiangqing:before {
+  content: '\e686'; }
+
+.icon-qiandao:before {
+  content: '\e684'; }
+
+.icon-buqian:before {
+  content: '\e674'; }
+
+.icon-jifen:before {
+  content: '\e67d'; }
+
+.icon-dengji:before {
+  content: '\e672'; }
+
+.icon-tixing:before {
+  content: '\e683'; }
+
+.icon-kecheng:before {
+  content: '\e67c'; }
+
+.icon-cuotiben:before {
+  content: '\e67b'; }
+
+.icon-jiazhang:before {
+  content: '\e67a'; }
+
+.icon-huodong:before {
+  content: '\e679'; }
+
+.icon-duihua:before {
+  content: '\e677'; }
+
+.icon-guihua:before {
+  content: '\e676'; }
+
+.icon-ceshi:before {
+  content: '\e673'; }
+
+.icon-jiantou-right:before {
+  content: '\e600'; }
+
+.icon-stars:before {
+  content: '\e61c'; }
+
+.icon-starlight:before {
+  content: '\e61b'; }
+
+.icon-down-jiantou:before {
+  content: '\e69d'; }
+
+.icon-add-image:before {
+  content: '\e602'; }
+
+.icon-del-image:before {
+  content: '\e62f'; }
+
+.icon-jiantou:before {
+  content: "\e600"; }
+
+.icon-class:before {
+  content: '\e671'; }
+
+.icon-dengji:before {
+  content: "\e672"; }
+
+.icon-ceshi:before {
+  content: "\e673"; }
+
+.icon-buqian:before {
+  content: "\e674"; }
+
+.icon-dili:before {
+  content: "\e675"; }
+
+.icon-guihua:before {
+  content: "\e676"; }
+
+.icon-duihua:before {
+  content: "\e677"; }
+
+.icon-huaxue:before {
+  content: "\e678"; }
+
+.icon-huodong:before {
+  content: "\e679"; }
+
+.icon-jiazhang:before {
+  content: "\e67a"; }
+
+.icon-cuotiben:before {
+  content: "\e67b"; }
+
+.icon-kecheng:before {
+  content: "\e67c"; }
+
+.icon-jifen:before {
+  content: "\e67d"; }
+
+.icon-lishi:before {
+  content: "\e67e"; }
+
+.icon-shengwu:before {
+  content: "\e682"; }
+
+.icon-tixing:before {
+  content: "\e683"; }
+
+.icon-qiandao:before {
+  content: "\e684"; }
+
+.icon-shuxue:before {
+  content: "\e685"; }
+
+.icon-xiangqing:before {
+  content: "\e686"; }
+
+.icon-wuli:before {
+  content: "\e687"; }
+
+.icon-zhongxin:before {
+  content: "\e689"; }
+
+.icon-yingyu:before {
+  content: "\e68a"; }
+
+.icon-yuwen:before {
+  content: "\e68b"; }
+
+.icon-zhengzhi:before {
+  content: "\e68c"; }
+
+.icon-xiaoxi1:before {
+  content: "\e67f"; }
+
+.icon-kqbaogao:before {
+  content: "\e680"; }
+
+.icon-zyhuifu:before {
+  content: "\e681"; }
+
+.icon-shketixing:before {
+  content: "\e688"; }
+
+.icon-kjbaogao:before {
+  content: "\e68e"; }
+
+.icon-zytixing:before {
+  content: "\e68f"; }
+
+.icon-xueke:before {
+  content: "\e690"; }
+
+.icon-duigou-gouxuan:before {
+  content: "\e691"; }
+
+.icon-guanyuwomen:before {
+  content: "\e692"; }
+
+.icon-jifendengji:before {
+  content: "\e693"; }
+
+.icon-chengchangguiji:before {
+  content: "\e694"; }
+
+.icon-jibenxinxi:before {
+  content: "\e695"; }
+
+.icon-gerenzhongxin-gengduo:before {
+  content: "\e696"; }
+
+/*右箭头*/
+.icon-wodefapiao:before {
+  content: "\e697"; }
+
+.icon-xiaoqupingfen:before {
+  content: "\e698"; }
+
+.icon-xingxing-an:before {
+  content: "\e699"; }
+
+.icon-xiugaimima:before {
+  content: "\e69a"; }
+
+.icon-yaoqinghaoyou:before {
+  content: "\e69b"; }
+
+.icon-yonghushouce:before {
+  content: "\e69c"; }
+
+.icon-zhanghuyue-xiala:before {
+  content: "\e69d"; }
+
+.icon-yuyintongzhi:before {
+  content: "\e69e"; }
+
+.icon-yijianfankui:before {
+  content: "\e69f"; }
+
+.icon-zhanghuyue:before {
+  content: "\e6a0"; }
+
+.icon-aboutus-list:before {
+  content: "\e6a3"; }
+
+.icon-evaluation:before {
+  content: "\e699"; }
+
+.icon-message-order:before {
+  content: "\e6a4"; }
+
+/*----------------------------------北校4期-----------------------------------*/
+.icon-dou:before {
+  content: "\e6b5"; }
+
+.icon-shop-cart:before {
+  content: "\e6af"; }
+
+.icon-bottomnav-index:before {
+  content: "\e6ac"; }
+
+.icon-bottomnav-type:before {
+  content: "\e6ad"; }
+
+.icon-bottomnav-user:before {
+  content: "\e6ae"; }
+
+.icon-bianji:before {
+  content: "\e614"; }
+
+/*编辑*/
+.icon-shanchu1:before {
+  content: "\e609"; }
+
+/*删除*/
+.icon-time:before {
+  content: "\e6be"; }
+
+/*日期选择*/
+.icon-xiaoxi:before {
+  content: "\e6a9"; }
+
+/*消息*/
+.icon-address:before {
+  content: "\e6aa"; }
+
+/*收货地址*/
+.icon-dou-big:before {
+  content: "\e6ab"; }
+
+/*我的-高豆*/
+.icon-success:before {
+  content: "\e6b7"; }
+
+/*订单兑换成功*/
+.icon-task:before {
+  content: "\e6b6"; }
+
+/*首页任务*/
+.icon-new:before {
+  content: "\e6b8"; }
+
+/*new*/
+.icon-left-arrow:before {
+  content: "\e6ba"; }
+
+/*向左箭头*/
+.icon-sub:before {
+  content: "\e6bb"; }
+
+/*查看详情*/
+html {
+  width: 100%;
+  height: 100%; }
+
+body {
+  position: relative;
+  background-color: #faf1e2;
+  width: 100%;
+  height: 100%; }
+
+.icon {
+  color: #fff;
+  font-size: .8rem; }
+
+/* 手册目录页 */
+.manuals-index-header {
+  background: url("../../images/v4/userManuals_index_hd.png") no-repeat;
+  height: 7.7rem;
+  background-size: 100%;
+  overflow: hidden; }
+  .manuals-index-header p {
+    color: #fff;
+    font-size: .92rem;
+    margin: 1.4rem auto 1rem 3.9rem; }
+
+.manuals-index-content {
+  background: url("../../images/v4/userManuals_index_con.png") no-repeat;
+  height: 20.56rem;
+  width: 95%;
+  background-size: contain;
+  position: absolute;
+  top: 7.7rem;
+  margin-top: -.1rem;
+  margin-left: .5rem;
+  overflow: hidden; }
+  .manuals-index-content p {
+    padding-left: 2.7rem;
+    margin-bottom: 1.6rem; }
+    .manuals-index-content p:first-child {
+      padding-left: 3.2rem;
+      margin-top: 1.1rem; }
+      .manuals-index-content p:first-child a {
+        margin-right: 4.5rem; }
+    .manuals-index-content p:nth-child(6) {
+      padding-left: 3rem;
+      margin-bottom: 1.5rem; }
+      .manuals-index-content p:nth-child(6) a {
+        margin-right: 4.1rem; }
+    .manuals-index-content p a {
+      margin-right: 3.8rem;
+      color: #2a3744;
+      font-size: .6rem; }
+      .manuals-index-content p a:hover, .manuals-index-content p a:active {
+        color: #3c9efa; }
+
+.footer {
+  background: url("../../images/v4/userManuals_index_bottom.png") no-repeat;
+  height: 1.9rem;
+  background-size: 100%;
+  position: relative;
+  width: 100%;
+  top: 19rem; }
+
+/* 公共部分 */
+.manuals-container {
+  padding-bottom: 2.5rem;
+  position: relative;
+  min-height: 100%;
+  box-sizing: border-box; }
+
+/* 1.公共头部 */
+.manuals-container .fix-header {
+  height: 1.8rem;
+  background-color: #3c9efa;
+  line-height: 1.8rem; }
+  .manuals-container .fix-header i.icon-left-arrow {
+    margin-left: .4rem; }
+  .manuals-container .fix-header i.icon-sub {
+    float: right;
+    margin-right: 1rem;
+    margin-top: .1rem; }
+
+/* 2.sticky footer */
+.manuals-footer {
+  background: url("../../images/v4/manuals_footer.png") no-repeat;
+  height: 2.84rem;
+  background-size: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%; }
+
+/* 3.下拉菜单页 */
+.menu {
+  display: none;
+  background-color: #3c9efa;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 1.9rem;
+  right: 0;
+  z-index: 10;
+  height: 9rem;
+  padding: .5rem 1rem; }
+  .menu li {
+    list-style: none;
+    float: left;
+    width: 33.33%;
+    text-align: center;
+    font-size: .6rem;
+    height: 1.6rem;
+    line-height: 1.6rem; }
+    .menu li a {
+      color: #fff;
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      text-decoration: none; }
+    .menu li.active {
+      background-color: #fff;
+      border-radius: .2rem; }
+      .menu li.active a {
+        color: #3c9efa; }
+  .menu li:nth-child(1) a, .menu li:nth-child(11) a {
+    text-align: left;
+    padding-left: 1.1rem; }
+
+.manuals-header span {
+  font-size: .68rem;
+  color: #fff;
+  letter-spacing: 1px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  top: -1.4rem; }
+
+/* 说明手册内容部分 */
+.manuals-content {
+  height: 21.3rem;
+  margin: .6rem .96rem; }
+
+.m-slide1 {
+  background: url("../../images/v4/manuals_slide1.png") no-repeat;
+  background-size: 100%; }
+
+.m-slide2 {
+  background: url("../../images/v4/manuals_slide2.png") no-repeat;
+  background-size: 100%; }
+
+.m-slide3 {
+  background: url("../../images/v4/manuals_slide3.png") no-repeat;
+  background-size: 100%; }
+
+.m-slide4 {
+  background: url("../../images/v4/manuals_slide4.png") no-repeat;
+  background-size: 100%;
+  margin-bottom: 0rem; }
+
+.m-slide5 {
+  background: url("../../images/v4/manuals_slide5.png") no-repeat;
+  background-size: 100%; }
+
+.m-slide6 {
+  background: url("../../images/v4/manuals_slide6.png") no-repeat;
+  background-size: 89%;
+  margin-left: 2rem; }
+
+.m-slide7 {
+  background: url("../../images/v4/manuals_slide7.png") no-repeat;
+  background-size: 100%; }
+
+.m-slide8 {
+  background: url("../../images/v4/manuals_slide8.png") no-repeat;
+  background-size: 85%;
+  margin-left: 4rem;
+  margin-top: 2rem; }
+
+.m-slide9 {
+  background: url("../../images/v4/manuals_slide9.png") no-repeat;
+  background-size: 100%; }
+
+.m-slide10 {
+  background: url("../../images/v4/manuals_slide10.png") no-repeat;
+  background-size: 85%;
+  margin-left: 4rem;
+  margin-top: 2rem; }
+
+.m-slide11 {
+  background: url("../../images/v4/manuals_slide11.png") no-repeat;
+  background-size: 85%;
+  margin-left: 4rem;
+  margin-top: 2rem; }
+
+.m-slide12 {
+  background: url("../../images/v4/manuals_slide12.png") no-repeat;
+  background-size: 100%; }
+
+.m-slide13 {
+  background: url("../../images/v4/manuals_slide13.png") no-repeat;
+  background-size: 100%; }
+
+.m-slide14 {
+  background: url("../../images/v4/manuals_slide14.png") no-repeat;
+  background-size: 85%;
+  margin-left: 4rem;
+  margin-top: 2rem; }
+
+/* 首页前进按钮，尾页后退按钮清除 */
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+  opacity: 0; }
+
+/* 修改前进后退按钮样式 */
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+  background-image: url("../../images/v4/prev.png");
+  left: 0; }
+
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+  background-image: url("../../images/v4/next.png");
+  right: 0; }
+
+.swiper-container {
+  overflow: visible; }

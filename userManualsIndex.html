@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <title>用户手册首页</title>
+    <link rel="stylesheet" href="./style/userManuals.css">
+</head>
+<body>
+  <header class="manuals-index-header">
+      <p>高思1对1学员在线</p>
+  </header>
+  <div class="manuals-index-content">
+      <p class="line1"><a href="#" data-count='0'>首页</a><a href="#" data-count='1'>个人中心</a></p>
+      <p class="line2"><a href="#" data-count='2'>我的课表</a><a href="#" data-count='3'>账户余额</a></p>
+      <p class="line3"><a href="#" data-count='4'>我的课程</a><a href="#" data-count='5'>我的发票</a></p>
+      <p class="line4"><a href="#" data-count='6'>活动报名</a><a href="#" data-count='7'>推荐好友</a></p>
+      <p class="line5"><a href="#" data-count='8'>课后作业</a><a href="#" data-count='9'>校区评价</a></p>
+      <p class="line6"><a href="#" data-count='10'>错题本</a><a href="#" data-count='11'>高豆兑换</a></p>
+      <p class="line7"><a href="#" data-count='12'>消息通知</a><a href="#" data-count='13'>每日任务</a></p>
+  </div>
+  <footer class="footer"></footer>
+  <script src="./js/jquery-1.12.2.min.js"></script>  
+  <script>
+    // 把索引传递过去 
+    $a = $('a');
+    $a.on('click',function(){
+      var index = $(this).attr('data-count');
+      window.location.href = "./userManualsDetail.html?" + "num=" + encodeURI(index);
+    })  
+    
+  </script>
+</body>
+</html>
